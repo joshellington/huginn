@@ -67,6 +67,7 @@ module Agents
     def google_client
       @google_client ||= Google::APIClient.new(
         {
+          version: :v2,
           application_name: "Huginn",
           application_version: "0.0.1",
           key: options['google_api_key'],
